@@ -1,10 +1,10 @@
-# Predictive Process Analysis and Outcome with LSTM Networks
+# Cold Spray Additive Manufacturing (CSAM) Process Monitoring with LSTM Networks
 📌 by @yongzane00
  
 ## Introduction
 Manufacturing processes generate highly complex and interdependent time-series data, where process variables continuously evolve and influence one another. Analyzing these sequential dependencies is crucial for predicting process health and quality in real time. Long Short-Term Memory (LSTM) networks, a type of recurrent neural network, are well-suited for modeling such time-dependent relationships, making them effective for process analysis, anomaly detection, and predictive maintenance in advanced manufacturing.
 
-However, before applying LSTM, it is critical to identify the most influential process variables that impact quality and performance. In our case, we focus on cold spray, a highly dynamic process where particle velocity is the key determinant of coating quality but is challenging to measure directly in real time. Through analysis, we identified that nozzle degradation, caused by abrasive wear from supersonic gas flow, alters spraying dynamics and affects particle velocity. Additionally, nozzle wear influences the main gas flow rate, which strongly correlates with particle velocity fluctuations. Given this dependency, we use Main Gas Flow Rate as a proxy indicator for predicting both particle velocity trends and coating quality.
+However, before applying LSTM, it is critical to identify the most influential process variables that impact quality and performance. In our case, we focus on CSAM, a highly dynamic process where particle velocity is the key determinant of coating quality but is challenging to measure directly in real time. Through analysis, we identified that nozzle degradation, caused by abrasive wear from supersonic gas flow, alters spraying dynamics and affects particle velocity. Additionally, nozzle wear influences the main gas flow rate, which strongly correlates with particle velocity fluctuations. Given this dependency, we use Main Gas Flow Rate as a proxy indicator for predicting both particle velocity trends and coating quality.
 
 By leveraging LSTM to capture these sequential patterns, we develop a data-driven predictive framework that enables real-time quality assessment, process monitoring, and predictive outcome. This approach minimizes reliance on offline inspections, reduces machine downtime, and enhances overall manufacturing efficiency while offering scalability to other time-series-driven industrial processes. 
 
@@ -24,7 +24,7 @@ Our results show that the LSTM model successfully predicts and reconstructs the 
 
 Further analysis of glass nozzle data reveals that the percentage of porosity in the coating strongly correlates with the percentage of anomaly data points, reinforcing our confidence in the model’s predictions. However, for polymer nozzles, while the LSTM correctly differentiates between good and bad conditions based on anomaly percentage, the porosity of the coating does not show significant variation. This suggests that factors other than porosity may be influencing coating quality, warranting further investigation.
 
-Overall, our findings demonstrate that LSTM effectively detects nozzle degradation based on time-series data, making it a valuable tool for predictive maintenance in cold spray and other industrial processes. While coating quality prediction may require additional factors, we strongly advocate for the application of LSTM networks in analyzing time-series data across various manufacturing systems for enhanced process monitoring and anomaly detection. 
+Overall, our findings demonstrate that LSTM effectively detects nozzle degradation based on time-series data, making it a valuable tool for predictive maintenance in CSAM and potentially used for other industrial processes. While coating quality prediction may require additional factors, we strongly advocate for the application of LSTM networks in analyzing time-series data across various manufacturing systems for enhanced process monitoring and anomaly detection. 
 
 ![alt text](assets/glass_nozzle.png)
 ![alt text](assets/polymer_nozzle.png)
